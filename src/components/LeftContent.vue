@@ -5,7 +5,6 @@
                  background-color="#fff"
                  text-color="#ccc"
                  active-text-color="#0cb1db">
-
             <el-menu-item index="2">
                 <i class="el-icon-menu"></i>
                 <span slot="title">导航二</span>
@@ -25,16 +24,18 @@
 </script>
 
 <style scoped>
-    .el-menu{
-        border: none ;
+    .el-menu {
+        border: none;
     }
+
     .el-menu-item.is-active {
         color: #0cb1db;
-        background-color:#ccc!important;
+        background-color: #ccc !important;
         border-right: 4px solid #409EFF;
     }
+
     .el-menu-item:hover {
         color: #0cb1db !important;
-        background-color:rgba(12,12,12,0.1)!important
+        background-color: rgba(12,12,12,0.1) !important
     }
 </style>

@@ -3,7 +3,7 @@
         <el-row class="head_row">
             <el-col :span="18" :offset="3">
                 <div class="left_head ">
-                    <router-link to="/Home">
+                    <router-link to="/Main">
                         <div class="logo">
                             <img src="#" alt="Alternate Text" />
                         </div>

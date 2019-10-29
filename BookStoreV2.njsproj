@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="babel.config.js" />
+    <Content Include="src\components\Item.vue" />
     <Content Include="src\components\LeftContent.vue">
       <SubType>Code</SubType>
     </Content>
@@ -62,6 +63,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\components\Main.vue">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\components\MainRightTop.vue">
       <SubType>Code</SubType>
     </Content>
     <Content Include="src\components\NaviBar.vue">

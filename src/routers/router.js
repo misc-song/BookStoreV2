@@ -26,6 +26,14 @@ const router = new VueRouter({
             component: Main,  /*(resolve) => require(['@/components/Home'], resolve),*/
             meta: { requireAuth: false },
 
-        }]
+        },
+        {
+            path: '/Main',
+            name: 'Main',
+            component: Main,  /*(resolve) => require(['@/components/Home'], resolve),*/
+            meta: { requireAuth: false },
+
+        }
+    ]
 });
 export default router;

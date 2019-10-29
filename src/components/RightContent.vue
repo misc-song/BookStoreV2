@@ -1,25 +1,16 @@
 ﻿<template>
     <div class="RightContent">
-        <el-row type="flex">
-            <el-col :span="12">
-                <BookItem />
+        <Item/>
 
-            </el-col>
-            <el-col :span="12">
-                <BookItem />
-
-            </el-col>
-        </el-row>
-       
     </div>
 </template>
 
 <script>
-    import BookItem from './BookItem.vue';
+    import Item from './Item.vue';
     export default {
         name: 'RightContent',
         components: {
-            BookItem,
+            Item,
         }
     }
 </script>

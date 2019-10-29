@@ -1,18 +1,14 @@
 ﻿<template>
-    <div class="Main" >
-        <el-row>
-            <el-col :span="4" :offset="3">
-                <div class="Main_left">
-                    <LeftContent/>
-                </div>
-               
-            </el-col>
-            <el-col :span="14" >
-                <div class="Main_right">
-                    <RightContent />
-                </div>
-            </el-col>
-        </el-row>
+    <div class="Main">
+
+        <div class="Main_left">
+            <LeftContent />
+        </div>
+        <div class="Main_right">
+
+            <RightContent />
+        </div>
+
     </div>
 </template>
 
@@ -22,7 +18,7 @@
 
 
     export default {
-        name: 'Mian',
+        name: 'Main',
         components: {
             LeftContent,
             RightContent
@@ -32,17 +28,22 @@
 
 <style scoped>
     .Main {
-       margin-top:20px;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 1200px;
         /*border:1px red solid;*/
     }
+
     .Main_left {
+        width:200px;
         min-height: 800px;
-        border-right:1px #ccc solid;
-     
-        
+        float:left;
+        border-right: 1px #ccc solid;
     }
+
     .Main_right {
+        width: 980px;
+        float: right;
         min-height: 800px;
-        padding-left:20px;
     }
 </style>
