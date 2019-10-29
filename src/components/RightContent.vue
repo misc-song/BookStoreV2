@@ -9,6 +9,11 @@
     import Item from './Item.vue';
     export default {
         name: 'RightContent',
+        props: {
+            result: {
+                type: Object,
+            }
+        },
         components: {
             Item,
         }

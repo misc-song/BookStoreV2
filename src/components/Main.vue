@@ -5,11 +5,11 @@
                 <LeftContent v-bind:result="result" />
             </div>
             <div class="Main_right">
-                <RightContent class="RightContent" />
+                <RightContent class="RightContent"  v-bind:result="result" />
             </div>
         </div>
         <div class="Main_Bottom">
-            <Pagination class="Pagination" />
+            <Pagination  v-if="Object.keys(result).length" class="Pagination"  v-bind:result="result" @func="LoadData" />
         </div>
        
     </div>
@@ -24,7 +24,7 @@
         name: 'Main',
         data() {
             return {
-                result: null,
+                result: {},
             }
         },
         props: {
@@ -36,15 +36,26 @@
             Pagination
         },
         methods: {
+            LoadData(pageIndex) {
+                this.axios
+                    .get('http://127.0.0.1:5000/api/Article/GetPageActicleList?pageSize=10&pageIndex='+pageIndex+'&type=hot')
+                    .then((response) => {
+                        console.log(response.data);
+                        this.result = response.data;
 
+                    }).catch((response) => {
+                        console.log(response);
+                    })
+            }
 
         },
         created() {
             this.axios
-                .get('http://127.0.0.1:5000/api/Article/GetArticle?articleId=1')
+                .get('http://127.0.0.1:5000/api/Article/GetPageActicleList?pageSize=10&pageIndex=10&type=hot')
                 .then((response) => {
-                    console.log(response.data);
+                    //console.log(response.data);
                     this.result = response.data;
+                  
                 }).catch((response) => {
                     console.log(response);
                 })
