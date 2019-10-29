@@ -3,8 +3,13 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import App from './App.vue';
 import router from '@/routers/router';   //导入router.js文件
-Vue.config.productionTip = true;
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 
+Vue.config.productionTip = true;
+//注册axios
+Vue.use(VueAxios, axios);
+//注册ElementUI
 Vue.use(ElementUI);
 
 new Vue({

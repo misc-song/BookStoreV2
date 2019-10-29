@@ -14,12 +14,29 @@
                 <span slot="title">导航三</span>
             </el-menu-item>
         </el-menu>
+        <button @click="clickMe">点我</button>
     </div>
 </template>
 
 <script>
     export default {
         name: 'LeftContent',
+        data() {
+            return{
+                msg : this.result
+            }
+        },
+        props: {
+            result: {
+                type: Object,
+            }
+        },
+        methods: {
+            clickMe() {
+                console.log(this.result);
+            }
+           
+        }
     }
 </script>
 

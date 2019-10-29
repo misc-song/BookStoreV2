@@ -1,43 +1,74 @@
 ﻿<template>
     <div class="Main">
-
-        <div class="Main_left">
-            <LeftContent />
+        <div class="Main_Content">
+            <div class="Main_left">
+                <LeftContent v-bind:result="result" />
+            </div>
+            <div class="Main_right">
+                <RightContent class="RightContent" />
+            </div>
         </div>
-        <div class="Main_right">
-
-            <RightContent />
+        <div class="Main_Bottom">
+            <Pagination class="Pagination" />
         </div>
-
+       
     </div>
 </template>
 
 <script>
     import LeftContent from './LeftContent.vue';
     import RightContent from './RightContent.vue';
-
+    import Pagination from './Pagination.vue';
 
     export default {
         name: 'Main',
+        data() {
+            return {
+                result: null,
+            }
+        },
+        props: {
+            msg: String
+        },
         components: {
             LeftContent,
-            RightContent
+            RightContent,
+            Pagination
+        },
+        methods: {
+
+
+        },
+        created() {
+            this.axios
+                .get('http://127.0.0.1:5000/api/Article/GetArticle?articleId=1')
+                .then((response) => {
+                    console.log(response.data);
+                    this.result = response.data;
+                }).catch((response) => {
+                    console.log(response);
+                })
         }
+
     }
 </script>
 
 <style scoped>
     .Main {
+    
+    }
+    .Main_Content {
         margin: 0 auto;
         margin-top: 20px;
         width: 1200px;
+        min-height: 800px;
         /*border:1px red solid;*/
     }
 
     .Main_left {
-        width:200px;
+        width: 200px;
         min-height: 800px;
-        float:left;
+        float: left;
         border-right: 1px #ccc solid;
     }
 
@@ -45,5 +76,11 @@
         width: 980px;
         float: right;
         min-height: 800px;
+    }
+
+    .Main_Bottom {
+        float: right;
+        width: 800px;
+        margin:0 auto;
     }
 </style>
