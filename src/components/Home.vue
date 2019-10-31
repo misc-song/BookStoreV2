@@ -1,8 +1,8 @@
 <template>
     <div class="home">
-        <h1>{{ msg }}</h1>
+        <!--<h1>{{ msg }}</h1>
         <el-link type="info">信息链接</el-link>
-        <p>Welcome to your new single-page application, built with <a href="https://vuejs.org" target="_blank">Vue.js</a>.</p>
+        <p>Welcome to your new single-page application, built with <a href="https://vuejs.org" target="_blank">Vue.js</a>.</p>-->
     </div>
 </template>
 

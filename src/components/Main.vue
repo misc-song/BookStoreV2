@@ -2,16 +2,16 @@
     <div class="Main">
         <div class="Main_Content">
             <div class="Main_left">
-                <LeftContent v-bind:result="result" />
+                <!-- 通过v-if 进行条件渲染 如果不使用条件判断则子组件在钩子函数中的无法获取数据  -->
+                <LeftContent v-if="Object.keys(result).length" v-bind:result="result" />
             </div>
             <div class="Main_right">
-                <RightContent class="RightContent"  v-bind:result="result" />
+                <RightContent v-if="Object.keys(result).length" class="RightContent"  v-bind:result="result" />
             </div>
         </div>
         <div class="Main_Bottom">
             <Pagination  v-if="Object.keys(result).length" class="Pagination"  v-bind:result="result" @func="LoadData" />
         </div>
-       
     </div>
 </template>
 

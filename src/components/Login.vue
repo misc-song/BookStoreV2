@@ -4,13 +4,13 @@
 
 
             <div class="login">
-                <p><span>用户名</span><input type="text" name="name" value="" /></p>
-                <p><span>密&nbsp;&nbsp;&nbsp;码</span><input type="password" name="name" value="" /></p>
-                <p><span>验证码</span><input type="text" name="name" /></p>
+                <p><input type="text" name="name" value="" placeholder="用户名" /></p>
+                <p><input type="password" name="name" value="" placeholder="密码" /></p>
+                <p><input type="text" name="name" placeholder="验证码" /></p>
                 <div class="submit">
 
 
-                    <p><input class="submit_btn" type="button" name="name" value="登录" /></p>
+                    <p><input class="submit_btn" type="button" name="name" value="登    录" /></p>
                 </div>
             </div>
         </div>
@@ -39,14 +39,14 @@
         box-shadow: #0cb1db 0px 0px 20px;
     }
 
-    .login {
+    /*.login {
         width: 374px;
-    }
+    }*/
 
     input {
         height: 40px;
-        width: 280px;
-        margin-left: 10px;
+        width: 97%;
+        padding-left: 2%;
     }
 
     span {
@@ -60,16 +60,17 @@
     }
 
     .submit_btn {
-        width: 285px;
-        float: right;
+         width: 100%;
+        padding-left: 2%;
         height: 46px;
-        font-size:18px;
-        outline:none;
-        border:none;
-        color:#fff;
-           background: 1px rgba(12,177,219,0.8);
+        font-size: 18px;
+        outline: none;
+        border: none;
+        color: #fff;
+        background: 1px rgba(12,177,219,0.8);
     }
-    .submit_btn:active{
-           background: 1px rgba(12,177,219,1);
-    }
+
+        .submit_btn:active {
+            background: 1px rgba(12,177,219,1);
+        }
 </style>
