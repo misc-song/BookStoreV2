@@ -6,11 +6,11 @@
                 <LeftContent v-if="Object.keys(result).length" v-bind:result="result" />
             </div>
             <div class="Main_right">
-                <RightContent v-if="Object.keys(result).length" class="RightContent"  v-bind:result="result" />
+                <RightContent v-if="Object.keys(result).length" class="RightContent" v-bind:result="result" />
             </div>
         </div>
         <div class="Main_Bottom">
-            <Pagination  v-if="Object.keys(result).length" class="Pagination"  v-bind:result="result" @func="LoadData" />
+            <Pagination v-if="Object.keys(result).length" class="Pagination" v-bind:result="result" @func="LoadData" />
         </div>
     </div>
 </template>
@@ -38,7 +38,7 @@
         methods: {
             LoadData(pageIndex) {
                 this.axios
-                    .get('http://127.0.0.1:5000/api/Article/GetPageActicleList?pageSize=10&pageIndex='+pageIndex+'&type=hot')
+                    .get('http://127.0.0.1:5000/api/Article/GetPageActicleList?pageSize=10&pageIndex=' + pageIndex + '&type=hot')
                     .then((response) => {
                         console.log(response.data);
                         this.result = response.data;
@@ -47,27 +47,26 @@
                         console.log(response);
                     })
             }
-
         },
+        //钩子函数 在组建创建完成后调用（用于初始化页面的原始数据）
         created() {
             this.axios
                 .get('http://127.0.0.1:5000/api/Article/GetPageActicleList?pageSize=10&pageIndex=10&type=hot')
                 .then((response) => {
                     //console.log(response.data);
                     this.result = response.data;
-                  
+
                 }).catch((response) => {
                     console.log(response);
                 })
         }
-
     }
 </script>
 
 <style scoped>
     .Main {
-    
     }
+
     .Main_Content {
         margin: 0 auto;
         margin-top: 20px;
@@ -92,6 +91,6 @@
     .Main_Bottom {
         float: right;
         width: 800px;
-        margin:0 auto;
+        margin: 0 auto;
     }
 </style>
