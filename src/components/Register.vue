@@ -34,7 +34,6 @@
         margin: 0 auto;
         border: 1px rgb(12,177,219);
         box-shadow: #0cb1db 0px 0px 20px;
-    
     }
 
     /*.register {
@@ -66,6 +65,7 @@
         border: none;
         color: #fff;
         background: 1px rgba(12,177,219,0.8);
+        /*不想写代码 忍不住看小说*/
     }
 
         .submit_btn:active {

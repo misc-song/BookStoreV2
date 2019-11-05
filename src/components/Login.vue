@@ -14,6 +14,7 @@
                 </div>
             </div>
         </div>
+        <!-- 如果想走的快的话 就一个人走 如果想走的远的话 就一起走 -->
     </div>
 </template>
 
@@ -21,6 +22,8 @@
     export default {
         name: "Login"
     }
+
+    
 </script>
 
 <style scoped>

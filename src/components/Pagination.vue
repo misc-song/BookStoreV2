@@ -19,7 +19,7 @@
                 }
             },
         },
-        data() {                //组建中的data 是一个函数 返回一个对象
+        data() {                //组件中的data 是一个函数 返回一个对象
             return {
                 pageSize: 10,
                 total: 0,
