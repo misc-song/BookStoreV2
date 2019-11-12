@@ -7,7 +7,7 @@
                         <a class="link" href="#">
                             <div>
                                 <img src="../assets/home.gif" class="home_icon" />&nbsp;主页
-                            </div>  
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -33,6 +33,10 @@
             return {
                 input: '',
                 select: '1',
+                searchContent: {
+                    input: this.input,
+                    select: this.select,
+                }
             }
         }
 
@@ -44,7 +48,6 @@
         height: 122px;
         background-image: url('../assets/bg.jpg');
         background-repeat: repeat-x;
-     
     }
 
     .naviContent {
@@ -52,8 +55,8 @@
     }
 
     .hb-left {
-        height:40px;
-        margin-top:10px;
+        height: 40px;
+        margin-top: 10px;
         float: left;
     }
 

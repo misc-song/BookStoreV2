@@ -1,19 +1,19 @@
 <template>
     <div>
         <ul>
-            <li>
+            <li v-for="item in results">
                 <a href="javascript:;" class="img_box">
-                    <img src="http://www.ytzhihui.com/newcover/2016/39.8/9787564155155/9787564155155.jpg">
+                    <img v-bind:src="item.pic_url">
                 </a>
                 <p>
                     <span class="name">
-                        <a href="javascript:;" class="clickName" title="马克思主义国际法思想研究">
-                            <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">马克思主义国际法思想研究</font></font>
+                        <a href="javascript:;" class="clickName" v-bind:title="item.title">
+                            <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">{{item.title}}</font></font>
                         </a>
                     </span>
-                    <span class="author" title="贺富永着">
+                    <span class="author" :title="item.author">
                         <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">贺富永着</font>
+                            <font style="vertical-align: inherit;">{{item.author}}</font>
                         </font>
                     </span>
                     <span class="info">
@@ -21,146 +21,14 @@
                             <em class="press"></em>
                             <font style="vertical-align: inherit;">
                                 <font style="vertical-align: inherit;">
-                                    东南大学出版社
+                                    {{item.publisher}}
                                 </font>
                             </font>
                         </i>
                         <i>
                             <em class="time"></em>
                             <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">2019-01</font>
-                            </font>
-                        </i>
-                    </span>
-                </p>
-            </li>
-            <li>
-                <a href="javascript:;" class="img_box">
-                    <img src="http://www.ytzhihui.com/newcover/2016/39.8/9787564155155/9787564155155.jpg">
-                </a>
-                <p>
-                    <span class="name">
-                        <a href="javascript:;" class="clickName" title="马克思主义国际法思想研究">
-                            <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">马克思主义国际法思想研究</font></font>
-                        </a>
-                    </span>
-                    <span class="author" title="贺富永着">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">贺富永着</font>
-                        </font>
-                    </span>
-                    <span class="info">
-                        <i>
-                            <em class="press"></em>
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">
-                                    东南大学出版社
-                                </font>
-                            </font>
-                        </i>
-                        <i>
-                            <em class="time"></em>
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">2019-01</font>
-                            </font>
-                        </i>
-                    </span>
-                </p>
-            </li>
-            <li>
-                <a href="javascript:;" class="img_box">
-                    <img src="http://www.ytzhihui.com/newcover/2016/39.8/9787564155155/9787564155155.jpg">
-                </a>
-                <p>
-                    <span class="name">
-                        <a href="javascript:;" class="clickName" title="马克思主义国际法思想研究">
-                            <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">马克思主义国际法思想研究</font></font>
-                        </a>
-                    </span>
-                    <span class="author" title="贺富永着">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">贺富永着</font>
-                        </font>
-                    </span>
-                    <span class="info">
-                        <i>
-                            <em class="press"></em>
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">
-                                    东南大学出版社
-                                </font>
-                            </font>
-                        </i>
-                        <i>
-                            <em class="time"></em>
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">2019-01</font>
-                            </font>
-                        </i>
-                    </span>
-                </p>
-            </li>
-            <li>
-                <a href="javascript:;" class="img_box">
-                    <img src="http://www.ytzhihui.com/newcover/2016/39.8/9787564155155/9787564155155.jpg">
-                </a>
-                <p>
-                    <span class="name">
-                        <a href="javascript:;" class="clickName" title="马克思主义国际法思想研究">
-                            <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">马克思主义国际法思想研究</font></font>
-                        </a>
-                    </span>
-                    <span class="author" title="贺富永着">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">贺富永着</font>
-                        </font>
-                    </span>
-                    <span class="info">
-                        <i>
-                            <em class="press"></em>
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">
-                                    东南大学出版社
-                                </font>
-                            </font>
-                        </i>
-                        <i>
-                            <em class="time"></em>
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">2019-01</font>
-                            </font>
-                        </i>
-                    </span>
-                </p>
-            </li>
-            <li>
-                <a href="javascript:;" class="img_box">
-                    <img src="http://www.ytzhihui.com/newcover/2016/39.8/9787564155155/9787564155155.jpg">
-                </a>
-                <p>
-                    <span class="name">
-                        <a href="javascript:;" class="clickName" title="马克思主义国际法思想研究">
-                            <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">马克思主义国际法思想研究</font></font>
-                        </a>
-                    </span>
-                    <span class="author" title="贺富永着">
-                        <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">贺富永着</font>
-                        </font>
-                    </span>
-                    <span class="info">
-                        <i>
-                            <em class="press"></em>
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">
-                                    东南大学出版社
-                                </font>
-                            </font>
-                        </i>
-                        <i>
-                            <em class="time"></em>
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">2019-01</font>
+                                <font style="vertical-align: inherit;">{{item.publish_time}}</font>
                             </font>
                         </i>
                     </span>
@@ -172,7 +40,26 @@
 
 <script>
     export default {
-        name: 'Item'
+        name: 'Item',
+        props: {
+            result: {
+                type: Object,
+                default() {
+                    return {}
+                }
+            },
+        },
+        data() {
+            return {
+                results: {}
+            }
+        },
+        created() {
+            console.log(this.result.total);
+            //console.log(this.pageSize);
+            this.total = this.result.total;
+            this.results = this.result;
+        }
     }
 </script>
 

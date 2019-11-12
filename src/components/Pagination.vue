@@ -3,7 +3,7 @@
         <el-pagination background layout="prev, pager, next" :total="total"  @current-change="handleCurrentChange">
 
         </el-pagination>
-        <button @click="getData">ddd</button>
+        <!--<button @click="getData">ddd</button>-->
     </div>
 
 </template>
@@ -36,7 +36,7 @@
             },
         },
         created() {
-            console.log(this.result.total);
+            //console.log(this.result.total);
             //console.log(this.pageSize);
             this.total = this.result.total;
         }

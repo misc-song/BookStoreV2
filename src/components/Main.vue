@@ -1,6 +1,6 @@
 ﻿<template>
     <div class="Main">
-        <NaviBar ref="keyWords"/>
+        <NaviBar ref="searchContent"/>
         <div class="Main_Content">
             <div class="Main_left">
                 <!-- 通过v-if 进行条件渲染 如果不使用条件判断则子组件在钩子函数中的无法获取数据  -->
@@ -40,7 +40,7 @@
         methods: {
             LoadData(pageIndex) {
                 this.axios
-                    .get('http://127.0.0.1:5555/api/Search/GetResult?pageSize=' + 30 + '&pageIndex=' + pageIndex + '&keywords=' + keywords)
+                    .get('http://127.0.0.1:5555/api/Search/GetResult?pageSize=' + 30 + '&pageIndex=' + pageIndex + '&keywords=' + this.$refs.searchContent.input)
                     .then((response) => {
                         console.log(response.data);
                         this.result = response.data;
