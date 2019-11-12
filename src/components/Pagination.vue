@@ -3,7 +3,7 @@
         <el-pagination background layout="prev, pager, next" :total="total"  @current-change="handleCurrentChange">
 
         </el-pagination>
-        <!--<button @click="getData">ddd</button>-->
+        <button @click="getData">ddd</button>
     </div>
 
 </template>
@@ -21,7 +21,7 @@
         },
         data() {                //组件中的data 是一个函数 返回一个对象
             return {
-                pageSize: 10,
+                pageSize: 30,
                 total: 0,
             }
         },
@@ -36,7 +36,7 @@
             },
         },
         created() {
-            //console.log(this.result);
+            console.log(this.result.total);
             //console.log(this.pageSize);
             this.total = this.result.total;
         }

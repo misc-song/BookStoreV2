@@ -1,7 +1,6 @@
 ﻿<template>
     <div class="RightContent">
         <Item />
-
     </div>
 </template>
 
