@@ -82,7 +82,8 @@
 
 <style scoped>
     .Main {
-        min-height:2000px;
+        min-height: 2000px;
+        padding-top: 60px;
     }
 
     .Main_Content {

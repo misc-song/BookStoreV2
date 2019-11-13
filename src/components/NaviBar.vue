@@ -45,6 +45,7 @@
 
 <style scoped>
     .NaviBar {
+        
         height: 122px;
         background-image: url('../assets/bg.jpg');
         background-repeat: repeat-x;

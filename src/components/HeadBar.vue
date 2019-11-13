@@ -28,13 +28,17 @@
 <script>
     export default {
         name: 'HeadBar',
-
     };
 </script>
 
 <style scoped>
     .HeadBar {
+        position: fixed;
+        width: 100%;
+        height: 60px;
         background-color: #333;
+        z-index: 999;
+    
     }
 
     .head_row {
