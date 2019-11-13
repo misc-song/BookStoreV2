@@ -1,6 +1,6 @@
 ﻿<template>
     <div class="Main">
-        <NaviBar ref="searchContent" />
+        <NaviBar ref="searchContent"  @func="LoadData" />
         <div class="Main_Content">
             <div class="Main_left">
                 <!-- 通过v-if 进行条件渲染 如果不使用条件判断则子组件在钩子函数中的无法获取数据  -->

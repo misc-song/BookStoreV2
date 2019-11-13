@@ -1,6 +1,6 @@
 ﻿<template>
     <div class="Pagination">
-        <el-pagination background layout="prev, pager, next" :total="total"  @current-change="handleCurrentChange">
+        <el-pagination background layout="prev, pager, next" :total="total" @current-change="handleCurrentChange">
 
         </el-pagination>
         <!--<button @click="getData">ddd</button>-->
@@ -22,7 +22,7 @@
         data() {                //组件中的data 是一个函数 返回一个对象
             return {
                 pageSize: 30,
-                total: 0,
+                total: this.result.total,
             }
         },
         methods: {              // 方法
@@ -30,6 +30,7 @@
             handleCurrentChange(val) {
                 console.log(`当前页: ${val}`);
                 this.$emit('func', val);
+                 this.total = this.result.total;
             },
             getData() {
                 console.log(this.result.total);
@@ -38,14 +39,17 @@
         created() {
             //console.log(this.result.total);
             //console.log(this.pageSize);
-            this.total = this.result.total;
+
+        },
+        updated() {
+           
         }
     }
 </script>
 
 <style scoped>
-    .Pagination{
-        margin:0 auto;
-        width:444px;
+    .Pagination {
+        margin: 0 auto;
+        width: 444px;
     }
 </style>

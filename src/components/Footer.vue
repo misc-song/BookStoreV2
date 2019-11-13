@@ -4,7 +4,7 @@
 
         </div>
         <div class="copyRight">
-            copy right
+            copy right ©shj
         </div>
     </div>
 </template>

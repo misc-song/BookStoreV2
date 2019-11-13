@@ -52,7 +52,7 @@
     }
 
     .right_head {
-        margin-top: 18px;
+        margin-top: 20px;
         float: right;
     }
 
