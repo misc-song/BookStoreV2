@@ -1,26 +1,30 @@
 <template>
     <div id="app">
         <HeadBar />
-        
+
         <!--<Main />-->
         <router-view></router-view>
-        <Home msg="Hello world!" />
+        <!--<Home msg="Hello world!" />-->
+        <hr />
+        <Footer v-bind:class="Footer" />
     </div>
 </template>
 
 <script>
 
     import HeadBar from './components/HeadBar.vue';
-    import Home from './components/Home.vue';
-    import Main from './components/Main.vue';
+    //import Home from './components/Home.vue';
+    //import Main from './components/Main.vue';
+    import Footer from './components/Footer.vue';
     import './css/normalize.css';
 
     export default {
         name: 'app',
         components: {
-            Home,
+            //Home,
             HeadBar,
-            Main,
+            //Main,
+            Footer,
         }
     };
     //人生啊，是这样不可预测。没有永恒
@@ -35,5 +39,8 @@
 </script>
 
 <style>
+    .Footer{
+        height:20px;
+    }
 </style>
 

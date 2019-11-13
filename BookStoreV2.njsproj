@@ -34,6 +34,7 @@
     <Content Include="public\index.html" />
     <Content Include="src\App.vue" />
     <Content Include="src\assets\bg.jpg" />
+    <Content Include="src\assets\default.png" />
     <Content Include="src\components\BookItem.vue">
       <SubType>Code</SubType>
     </Content>

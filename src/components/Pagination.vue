@@ -1,5 +1,5 @@
 ﻿<template>
-    <div>
+    <div class="Pagination">
         <el-pagination background layout="prev, pager, next" :total="total"  @current-change="handleCurrentChange">
 
         </el-pagination>
@@ -44,4 +44,8 @@
 </script>
 
 <style scoped>
+    .Pagination{
+        margin:0 auto;
+        width:444px;
+    }
 </style>

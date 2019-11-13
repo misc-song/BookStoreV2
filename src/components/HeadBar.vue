@@ -8,15 +8,17 @@
                             <img src="#" alt="Alternate Text" />
                         </div>
                         <div class="sitename">
-                            TestPage
+                            书阁网
                         </div>
                     </router-link>
                 </div>
                 <div class="right_head ">
                     <!--<span><a class="head_link" href="#">登录</a></span>
                     <span><a class="head_link" href="#">注册</a></span>-->
-                    <span><router-link to="/Login">login</router-link></span>
-                    <span><router-link to="/Register">register</router-link></span>
+                    <!--<span><router-link to="/Login">login</router-link></span>
+                    <span><router-link to="/Register">register</router-link></span>-->
+                    <span><router-link to="/Login">登录</router-link></span>
+                    <span><router-link to="/Register">注册</router-link></span>
                 </div>
             </el-col>
         </el-row>
@@ -26,7 +28,7 @@
 <script>
     export default {
         name: 'HeadBar',
-      
+
     };
 </script>
 
@@ -69,9 +71,9 @@
         cursor: pointer;
     }
 
-    .head_link{
+    .head_link {
         color: #fff;
-        text-decoration:none;
-        font-size:18px;
+        text-decoration: none;
+        font-size: 18px;
     }
 </style>

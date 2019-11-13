@@ -1,8 +1,10 @@
 <template>
     <div>
         <ul>
-            <li v-for="item in results">
+            <li v-for="item in result" :key="item.id">
+                <span>{{item.id}}</span>
                 <a href="javascript:;" class="img_box">
+                    
                     <img v-bind:src="item.pic_url">
                 </a>
                 <p>
@@ -55,10 +57,15 @@
             }
         },
         created() {
-            console.log(this.result.total);
+            console.log(this.result.length);
             //console.log(this.pageSize);
             this.total = this.result.total;
-            this.results = this.result;
+            // this.results = this.result.result;
+        },
+        watch: {
+            result(newV) {
+                console.log(newV)
+            }
         }
     }
 </script>
