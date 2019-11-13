@@ -8,7 +8,7 @@
                             <img src="#" alt="Alternate Text" />
                         </div>
                         <div class="sitename">
-                            书阁网
+                            书歌网
                         </div>
                     </router-link>
                 </div>

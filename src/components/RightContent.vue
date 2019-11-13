@@ -6,7 +6,7 @@
                 <span>{{item.id}}</span>
                 <a href="javascript:;" class="img_box">
                     <!--当图片错误时（无法加载资源） 触发onerror 事件 重新绑定图片 onerror -->
-                    <img v-bind:src="item.pic_url" :onerror="defalutImg">
+                    <img v-bind:src="item.pic_url" :onerror="defalutImg" class="cover">
                 </a>
                 <p>
                     <span class="name">
@@ -106,7 +106,10 @@
         width: 100%;
         height: 100%;
     }
-
+    .cover{
+        border:1px rgba(204,204,204,0.5) solid;
+        border-radius:10px;
+    }
     p {
         padding-left: 138px;
         display: block;

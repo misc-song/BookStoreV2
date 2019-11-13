@@ -7,14 +7,26 @@
                  active-text-color="#0cb1db">
             <el-menu-item index="2">
                 <i class="el-icon-menu"></i>
-                <span slot="title">导航二</span>
+                <span slot="title">分类1</span>
             </el-menu-item>
             <el-menu-item index="3">
-                <i class="el-icon-setting"></i>
-                <span slot="title">导航三</span>
+                <i class="el-icon-menu"></i>
+                <span slot="title">分类2</span>
+            </el-menu-item>
+            <el-menu-item index="4">
+                <i class="el-icon-menu"></i>
+                <span slot="title">分类3</span>
+            </el-menu-item>
+            <el-menu-item index="5">
+                <i class="el-icon-menu"></i>
+                <span slot="title">分类4</span>
+            </el-menu-item>
+            <el-menu-item index="6">
+                <i class="el-icon-menu"></i>
+                <span slot="title">分类5</span>
             </el-menu-item>
         </el-menu>
-        <button @click="clickMe">点我</button>
+    
     </div>
 </template>
 
@@ -32,9 +44,9 @@
             }
         },
         methods: {
-            clickMe() {
-                console.log(this.result);
-            }
+            //clickMe() {
+            //    console.log(this.result);
+            //}
            
         }
     }
