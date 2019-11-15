@@ -1,10 +1,10 @@
 ﻿<template>
     <div class="Main">
-        <NaviBar ref="searchContent"  @func="LoadData" />
+        <NaviBar ref="searchContent" @function="SearchData" />
         <div class="Main_Content">
             <div class="Main_left">
                 <!-- 通过v-if 进行条件渲染 如果不使用条件判断则子组件在钩子函数中的无法获取数据  -->
-                <LeftContent v-if="Object.keys(result).length" v-bind:result="result" @func="LoadData" />
+                <LeftContent v-if="Object.keys(result).length" v-bind:result="result" />
             </div>
             <div class="Main_right">
                 <RightContent v-if="Object.keys(result).length" class="RightContent" v-bind:result="result" />
@@ -13,7 +13,7 @@
                 <!--<RightContent v-model="result" v-if="Object.keys(result).length" class="RightContent"  />-->
             </div>
             <div class="Main_Bottom">
-                <Pagination v-if="Object.keys(result).length" class="Pagination" v-bind:result="result" @func="LoadData" />
+                <Pagination v-if="Object.keys(result).length" class="Pagination" ref="mychild" v-bind:result="result" @func="LoadData" />
             </div>
         </div>
     </div>
@@ -53,13 +53,29 @@
         methods: {
             LoadData(pageIndex) {
                 //使用axios发送get请求
+                console.log("loaddata");
                 this.axios
                     .get('http://127.0.0.1:5555/api/Search/GetResult?pageSize=' + 16 + '&pageIndex=' + pageIndex + '&keywords=' + this.$refs.searchContent.input)
                     .then((response) => {
-                        console.log(response.data);
-                        this.result = {}
+                        //console.log(response.data);
+                        //this.result = {}
                         this.result = response.data;
+                        this.$refs.SetTotal.setTotal(this.result.total);
 
+                    }).catch((response) => {
+                        console.log(response);
+                    })
+            },
+            SearchData(keyWord) {
+                console.log("SearchData");
+                //使用axios发送get请求
+                this.axios
+                    .get('http://127.0.0.1:5555/api/Search/GetResult?pageSize=16&pageIndex=1&keywords=' + keyWord)
+                    .then((response) => {
+                        //console.log(response.data);
+                        //this.result = {}
+                        this.result = response.data;
+                         this.$refs.mychild.SetTotal(this.result.total);//在回调中设置子组件的值
                     }).catch((response) => {
                         console.log(response);
                     })

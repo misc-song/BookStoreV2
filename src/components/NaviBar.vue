@@ -18,7 +18,7 @@
                             <el-option label="ISBN" value="2"></el-option>
                             <el-option label="作者" value="3"></el-option>
                         </el-select>
-                        <el-button slot="append" icon="el-icon-search"></el-button>
+                        <el-button slot="append" icon="el-icon-search" v-on:click="SearchData" v-model="input"></el-button>
                     </el-input>
                 </div>
             </el-col>
@@ -38,14 +38,20 @@
                     select: this.select,
                 }
             }
+        },
+        methods: {
+            SearchData() {
+                console.log("Btn Emit");
+                this.$emit('function', this.input);
+            }
         }
+
 
     }
 </script>
 
 <style scoped>
     .NaviBar {
-        
         height: 122px;
         background-image: url('../assets/bg.jpg');
         background-repeat: repeat-x;
