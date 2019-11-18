@@ -3,7 +3,7 @@
         <!-- <Item v-bind:result="result" />-->
         <ul>
             <li v-for="item in result.result" :key="item.id">
-                <span>{{item.id}}</span>
+                <!--<span>{{item.id}}</span>-->
                 <a href="javascript:;" class="img_box">
                     <!--当图片错误时（无法加载资源） 触发onerror 事件 重新绑定图片 onerror -->
                     <img v-bind:src="item.pic_url" :onerror="defalutImg" class="cover">

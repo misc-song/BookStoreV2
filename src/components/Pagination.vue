@@ -5,7 +5,6 @@
         </el-pagination>
         <!--<button @click="getData">ddd</button>-->
     </div>
-
 </template>
 
 <script>
@@ -48,9 +47,9 @@
         //        //this.value = this.demo;
         //    }
         //},
-        //created() {
-        //    this.total = this.result.total;
-        //},
+        created() {                         //初始化成员
+            this.total = this.result.total;
+        },
         //beforeUpdate() {
         //    console.log("记录数" + this.result.total);
         //    this.total = this.result.total;

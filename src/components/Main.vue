@@ -60,7 +60,7 @@
                         //console.log(response.data);
                         //this.result = {}
                         this.result = response.data;
-                        this.$refs.SetTotal.setTotal(this.result.total);
+                         this.$refs.mychild.SetTotal(this.result.total);
 
                     }).catch((response) => {
                         console.log(response);
@@ -75,7 +75,7 @@
                         //console.log(response.data);
                         //this.result = {}
                         this.result = response.data;
-                         this.$refs.mychild.SetTotal(this.result.total);//在回调中设置子组件的值
+                        this.$refs.mychild.SetTotal(this.result.total);//在回调中设置子组件的值
                     }).catch((response) => {
                         console.log(response);
                     })
@@ -89,6 +89,7 @@
                 .then((response) => {
                     //console.log(response.data);
                     this.result = response.data;
+                       this.$refs.mychild.SetTotal(this.result.total);
                 }).catch((response) => {
                     console.log(response);
                 })
